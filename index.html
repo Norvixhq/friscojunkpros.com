@@ -219,10 +219,11 @@
     .fc a{display:flex;align-items:center;gap:10px;padding:16px 24px;background:var(--or);color:#fff;border-radius:60px;font-weight:700;font-size:.88rem;box-shadow:0 8px 32px rgba(242,101,34,.4);transition:all .35s}
     .fc a:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 14px 48px rgba(242,101,34,.55)}
 
+    .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     /* RESPONSIVE */
     @media(max-width:1024px){.hero-i{grid-template-columns:1fr;text-align:center}.hero-c{order:1}.hf{order:2;max-width:500px;margin:0 auto}.hero-desc{margin-left:auto;margin-right:auto}.hero-act{justify-content:center}.hero-st{justify-content:center}.hero-badge{margin-left:auto;margin-right:auto}.sg{grid-template-columns:repeat(2,1fr)}.bg2{grid-template-columns:repeat(2,1fr)}.rg{grid-template-columns:repeat(2,1fr)}.f-g{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:768px){section{padding:72px 24px}.nv{padding:0 16px}.nv-l,.nv-c{display:none}.nv-t{display:flex}.hero{min-height:auto;padding:100px 16px 60px}.hero h1{font-size:2rem}.hero-st{flex-wrap:wrap;gap:24px}.sg,.stg,.rg,.ag{grid-template-columns:1fr}.bg2{grid-template-columns:1fr 1fr}.f-g{grid-template-columns:1fr}.cta-b{padding:40px 24px}.hf{padding:32px 24px}}
-    @media(max-width:480px){.hero h1{font-size:1.6rem}.hero-act{flex-direction:column;align-items:stretch}.hero-act .btn{width:100%;justify-content:center}.bg2{grid-template-columns:1fr}.cta-btns{flex-direction:column;align-items:center}.cta-btns .btn{width:100%;max-width:320px}.fc a{padding:14px 18px;font-size:.82rem}}
+    @media(max-width:768px){section{padding:48px 16px}.nv{padding:0 16px}.nv-l,.nv-c{display:none}.nv-t{display:flex}.nv-b img{width:280px}.hero{min-height:auto;padding:100px 16px 60px}.hero h1{font-size:2rem}.hero-st{flex-wrap:wrap;gap:24px}.sg,.stg,.rg,.ag,.trust-grid{grid-template-columns:1fr}.bg2{grid-template-columns:1fr 1fr}.f-g{grid-template-columns:1fr}.cta-b{padding:40px 24px}.hf{padding:32px 24px}.f-br img{width:320px!important}.f-br p{max-width:100%}.hero-badge{font-size:.65rem;padding:10px 20px}}
+    @media(max-width:480px){.hero h1{font-size:1.6rem}.hero-act{flex-direction:column;align-items:stretch}.hero-act .btn{width:100%;justify-content:center}.bg2{grid-template-columns:1fr}.cta-btns{flex-direction:column;align-items:center}.cta-btns .btn{width:100%;max-width:320px}.fc a{padding:14px 18px;font-size:.82rem}.trust-grid{grid-template-columns:1fr!important}.f-br img{width:280px!important}}
   
     .skip{position:absolute;top:-100px;left:16px;background:var(--or);color:#fff;padding:12px 24px;border-radius:8px;font-weight:700;font-size:.85rem;z-index:10001;transition:top .3s}.skip:focus{top:16px}
     *:focus-visible{outline:2px solid var(--or);outline-offset:2px;border-radius:4px}
@@ -494,7 +495,7 @@
         <h2 style="font-weight:900;font-size:clamp(1.6rem,3vw,2.2rem);color:var(--cr);margin:0 0 12px;">One Request. Multiple <em style="font-style:italic;color:var(--or);">Vetted Providers.</em></h2>
         <p style="color:var(--mu);font-size:1rem;max-width:560px;margin:0 auto;line-height:1.7;">Instead of calling five different companies and comparing prices yourself, submit one request and let vetted local pros compete for your job.</p>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;" class="rv">
+      <div class="trust-grid rv">
         <div style="padding:32px 24px;border:1px solid rgba(232,237,244,.05);border-radius:16px;background:rgba(232,237,244,.02);text-align:center;">
           <div style="font-size:2rem;margin-bottom:16px;">⚡</div>
           <h3 style="font-weight:700;font-size:1rem;color:var(--cr);margin-bottom:8px;">Fast Matching</h3>
