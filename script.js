@@ -21,7 +21,7 @@
 // Event tracking
 function trackEvent(action, category, label) {
   if (typeof gtag === 'function') gtag('event', action, { event_category: category, event_label: label });
-  if (typeof fbq === 'function') fbq('track', action === 'form_submit' ? 'Lead' : 'ViewContent', { content_name: label });
+  if (typeof fbq === 'function' && action !== 'form_submit') fbq('track', 'ViewContent', { content_name: label });
 }
 document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
   el.addEventListener('click', function() { trackEvent('phone_click', 'engagement', 'phone_cta'); });
