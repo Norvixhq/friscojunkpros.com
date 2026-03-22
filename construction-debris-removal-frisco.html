@@ -220,12 +220,13 @@
         <div class="cta-box rv" style="text-align:left;padding:40px 36px;">
           <h2 style="text-align:center;margin-top:0!important;">Get a Fast Quote for Construction Debris Removal</h2>
           <p style="text-align:center;">Fill out the form below or call <a href="tel:+16823372918" style="color:var(--or);font-weight:700;">(682) 337-2918</a> for an immediate estimate.</p>
-          <form id="form-cons" action="https://formspree.io/f/mdawwrrd" method="POST" data-redirect="thank-you.html" style="max-width:540px;margin:24px auto 0;">
+          <form id="form-cons" action="https://formspree.io/f/mdawwrrd" method="POST"  style="max-width:540px;margin:24px auto 0;">
+            <input type="hidden" name="_next" value="https://www.friscojunkpros.com/thank-you.html"/>
             <div class="fg"><label for="q-name-cons">Your Name *</label><input type="text" id="q-name-cons" name="name" placeholder="John Smith" required/></div>
             <div class="fg"><label for="q-phone-cons">Phone Number *</label><input type="tel" id="q-phone-cons" name="phone" placeholder="(682) 337-2918" required/></div>
             <div class="fg"><label for="q-address-cons">Pickup Address</label><input type="text" id="q-address-cons" name="address" placeholder="Your Frisco area address"/></div>
             <div class="fg"><label for="q-details-cons">Describe What You Need Removed</label><textarea id="q-details-cons" name="details" rows="3" placeholder="E.g., Drywall scraps, old cabinets, tile from kitchen remodel" style="width:100%;padding:13px 16px;border:1px solid rgba(232,237,244,.08);border-radius:10px;background:rgba(232,237,244,.04);color:var(--cr);font-family:'Outfit',sans-serif;font-size:.95rem;resize:vertical;"></textarea></div>
-            <div class="fg"><label>Photo (Optional)</label><div class="fu"><input type="file" accept="image/*" aria-label="Upload photo"/><span>📷 Upload a photo for a faster, more accurate quote</span></div></div><input type="hidden" name="utm_source" value=""/>
+            <div class="fg"><label for="description">Description (Optional)</label><textarea id="description" name="description" rows="3" placeholder="Tell us what you need removed — e.g., old couch and two mattresses from upstairs bedroom"></textarea></div><input type="hidden" name="utm_source" value=""/>
             <input type="hidden" name="utm_medium" value=""/>
             <input type="hidden" name="utm_campaign" value=""/>
             <input type="hidden" name="gclid" value=""/>
