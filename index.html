@@ -89,7 +89,7 @@
     .hero-i{max-width:1280px;margin:0 auto;width:100%;display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center;position:relative;z-index:2}
     .hero-c{position:relative}
 
-    .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;border:1px solid rgba(67,160,71,.25);background:var(--gn-g);border-radius:50px;font-size:.76rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--gn);margin-bottom:24px;animation:fU .8s ease 1.8s both}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;border:1px solid rgba(67,160,71,.25);background:var(--gn-g);border-radius:50px;font-size:.76rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--gn);text-shadow:0 0 8px rgba(67,160,71,.4),0 0 16px rgba(67,160,71,.2);box-shadow:0 0 12px rgba(67,160,71,.15),inset 0 0 12px rgba(67,160,71,.05);margin-bottom:24px;animation:fU .8s ease 1.8s both}
     .hero-badge::before{content:'✓ '}
 
     .hero h1{font-weight:900;font-size:clamp(2.4rem,5vw,3.6rem);line-height:1.06;margin-bottom:10px;color:var(--cr);animation:fU .5s ease .3s both}
@@ -103,7 +103,7 @@
     .st{text-align:center}.st-n{font-weight:900;font-size:1.7rem;color:var(--or);line-height:1}.st-l{font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--mu2);margin-top:6px}
 
     /* FORM */
-    .hf{background:linear-gradient(145deg,rgba(12,26,46,.9),rgba(17,34,64,.95));border:1px solid rgba(232,237,244,.06);border-radius:20px;padding:40px 36px;backdrop-filter:blur(20px);box-shadow:0 32px 80px rgba(0,0,0,.4);animation:fU .5s ease .4s both;position:relative;overflow:hidden}
+    .hf{box-shadow:0 0 40px rgba(242,101,34,.08),0 0 80px rgba(21,101,192,.05),inset 0 1px 0 rgba(232,237,244,.06);background:linear-gradient(145deg,rgba(12,26,46,.9),rgba(17,34,64,.95));border:1px solid rgba(232,237,244,.06);border-radius:20px;padding:40px 36px;backdrop-filter:blur(20px);box-shadow:0 32px 80px rgba(0,0,0,.4);animation:fU .5s ease .4s both;position:relative;overflow:hidden}
     .hf::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--or),var(--gn))}
     .ft{font-weight:800;font-size:1.25rem;color:var(--cr);text-align:center;margin-bottom:4px}
     .fs{text-align:center;font-size:.84rem;color:var(--mu);margin-bottom:28px}
@@ -115,8 +115,7 @@
     .fu{border:1px dashed rgba(232,237,244,.1);border-radius:10px;padding:16px;text-align:center;cursor:pointer;transition:all .3s;background:rgba(232,237,244,.02);position:relative}
     .fu:hover{border-color:var(--or);background:rgba(242,101,34,.03)}
     .fu input{position:absolute;inset:0;opacity:0;cursor:pointer}.fu span{font-size:.82rem;color:var(--mu)}
-    .fbtn{width:100%;padding:16px;background:linear-gradient(135deg,var(--or),var(--or-d));color:#fff;border:none;border-radius:10px;font-family:'Outfit',sans-serif;font-size:1rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all .35s cubic-bezier(.22,1,.36,1);margin-top:8px;box-shadow:0 8px 32px rgba(242,101,34,.3)}
-    .fbtn:hover{transform:translateY(-2px);box-shadow:0 14px 48px rgba(242,101,34,.45)}
+    .fbtn{width:100%;padding:18px;background:linear-gradient(135deg,var(--or) 0%,var(--or-d) 50%,var(--or) 100%);background-size:200% 100%;color:#fff;border:none;border-radius:12px;font-family:'Outfit',sans-serif;font-size:1.05rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .4s cubic-bezier(.22,1,.36,1);margin-top:12px;box-shadow:0 8px 32px rgba(242,101,34,.35),0 0 0 1px rgba(242,101,34,.15);position:relative;overflow:hidden;animation:btnShimmer 3s ease-in-out infinite}.fbtn::before{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.15),transparent);transition:left .6s}.fbtn:hover{transform:translateY(-3px);box-shadow:0 16px 56px rgba(242,101,34,.5),0 0 0 1px rgba(242,101,34,.3);background-position:100% center}.fbtn:hover::before{left:120%}.fbtn:active{transform:translateY(0)}@keyframes btnShimmer{0%,100%{background-position:0% center}50%{background-position:100% center}}
     .fn{text-align:center;font-size:.72rem;color:var(--mu2);margin-top:14px;letter-spacing:.5px}
 
     
@@ -221,9 +220,9 @@
 
     .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     /* RESPONSIVE */
-    @media(max-width:1024px){.hero-i{grid-template-columns:1fr;text-align:center}.hero-c{order:1}.hf{order:2;max-width:500px;margin:0 auto}.hero-desc{margin-left:auto;margin-right:auto}.hero-act{justify-content:center}.hero-st{justify-content:center}.hero-badge{margin-left:auto;margin-right:auto}.sg{grid-template-columns:repeat(2,1fr)}.bg2{grid-template-columns:repeat(2,1fr)}.rg{grid-template-columns:repeat(2,1fr)}.f-g{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:768px){section{padding:48px 16px}.nv{padding:0 16px}.nv-l,.nv-c{display:none}.nv-t{display:flex}.nv-b img{width:280px}.hero{min-height:auto;padding:100px 16px 60px}.hero h1{font-size:2rem}.hero-st{flex-wrap:wrap;gap:24px}.sg,.stg,.rg,.ag,.trust-grid{grid-template-columns:1fr}.bg2{grid-template-columns:1fr 1fr}.f-g{grid-template-columns:1fr;text-align:center}.f-br{display:flex;flex-direction:column;align-items:center}.f-br p{text-align:center}.f-lk{text-align:center}.f-ct li{justify-content:center}.cta-b{padding:40px 24px}.hf{padding:32px 24px}.f-br img{width:420px!important;max-width:92vw}.f-br p{max-width:100%}.hero-badge{font-size:.65rem;padding:10px 20px}}
-    @media(max-width:480px){.hero h1{font-size:1.6rem}.hero-act{flex-direction:column;align-items:center}.hero-act .btn{width:100%;justify-content:center}.bg2{grid-template-columns:1fr}.cta-btns{flex-direction:column;align-items:center}.cta-btns .btn{width:100%;max-width:320px}.fc a{padding:14px 18px;font-size:.82rem}.trust-grid{grid-template-columns:1fr!important}.f-br img{width:380px!important;max-width:92vw}}
+    @media(max-width:1024px){.hero-i{grid-template-columns:1fr;text-align:center}.hero-c{order:1}.hf{box-shadow:0 0 40px rgba(242,101,34,.08),0 0 80px rgba(21,101,192,.05),inset 0 1px 0 rgba(232,237,244,.06);order:2;max-width:500px;margin:0 auto}.hero-desc{margin-left:auto;margin-right:auto}.hero-act{justify-content:center}.hero-st{justify-content:center}.hero-badge{margin-left:auto;margin-right:auto}.sg{grid-template-columns:repeat(2,1fr)}.bg2{grid-template-columns:repeat(2,1fr)}.rg{grid-template-columns:repeat(2,1fr)}.f-g{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:768px){section{padding:48px 16px}.nv{padding:0 16px}.nv-l,.nv-c{display:none}.nv-t{display:flex}.nv-b img{width:280px}.hero{min-height:auto;padding:100px 16px 60px}.hero h1{font-size:2rem}.hero-st{flex-wrap:wrap;gap:24px}.sg,.stg,.rg,.ag,.trust-grid{grid-template-columns:1fr}.bg2{grid-template-columns:1fr 1fr}.f-g{grid-template-columns:1fr;text-align:center}.f-br{display:flex;flex-direction:column;align-items:center}.f-br p{text-align:center}.f-lk{text-align:center}.f-ct li{justify-content:center}.cta-b{padding:40px 24px}.hf{box-shadow:0 0 40px rgba(242,101,34,.08),0 0 80px rgba(21,101,192,.05),inset 0 1px 0 rgba(232,237,244,.06);padding:32px 24px}.f-br img{width:420px!important;max-width:92vw}.f-br p{max-width:100%}.hero-badge{font-size:.65rem;padding:10px 20px}}
+    @media(max-width:480px){.hero h1{font-size:1.6rem}.hero-act{flex-direction:column;align-items:center}.hero-act .btn{width:100%;justify-content:center}.bg2{grid-template-columns:1fr}.cta-btns{flex-direction:column;align-items:center}.cta-btns .btn{width:100%;max-width:320px}.fc a{padding:14px 18px;font-size:.82rem}div[style*="grid-template-columns:2fr 1fr 1fr"]{grid-template-columns:1fr 1fr!important}.trust-grid{grid-template-columns:1fr!important}.f-br img{width:380px!important;max-width:92vw}}
   
     .skip{position:absolute;top:-100px;left:16px;background:var(--or);color:#fff;padding:12px 24px;border-radius:8px;font-weight:700;font-size:.85rem;z-index:10001;transition:top .3s}.skip:focus{top:16px}
     *:focus-visible{outline:2px solid var(--or);outline-offset:2px;border-radius:4px}
@@ -301,8 +300,14 @@
                 <h3 class="ft">Get Your Free Quote</h3>
         <p class="fs">Fast response — most quotes within 15 minutes</p>
         <div class="fg"><label for="name">Your Name *</label><input type="text" id="name" name="name" placeholder="John Smith" required/></div>
-        <div class="fg"><label for="phone">Phone Number *</label><input type="tel" id="phone" name="phone" placeholder="(682) 337-2918" required/></div>
-        <div class="fg"><label for="address">Pickup Address</label><input type="text" id="address" name="address" placeholder="Your Frisco area address"/></div>
+        <div class="fg"><label for="phone">Phone Number *</label><input type="tel" id="phone" name="phone" placeholder="(214) 555-1234" required/></div>
+        <div class="fg"><label for="address">Street Address</label><input type="text" id="address" name="address" placeholder="1234 Main Street" required/></div>
+        <div class="fg"><label for="apt">Apt / Suite / Unit <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--mu2);">(optional)</span></label><input type="text" id="apt" name="apt" placeholder="Apt 204"/></div>
+        <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;">
+          <div class="fg"><label for="city">City</label><input type="text" id="city" name="city" placeholder="Frisco"/></div>
+          <div class="fg"><label for="state">State</label><input type="text" id="state" name="state" placeholder="TX"/></div>
+          <div class="fg"><label for="zip">Zip Code</label><input type="text" id="zip" name="zip" placeholder="75034"/></div>
+        </div>
         <div class="fg"><label for="junk-type">Type of Junk</label><select id="junk-type" name="junk_type"><option value="">Select type of junk...</option><option value="furniture">Furniture Removal</option><option value="appliances">Appliance Removal</option><option value="garage">Garage Cleanout</option><option value="construction">Construction Debris</option><option value="mattress">Mattress Removal</option><option value="yard">Yard Waste</option><option value="electronics">Electronics</option><option value="general">General Junk</option><option value="other">Other</option></select></div>
         <div class="fg"><label for="description">Description (Optional)</label><textarea id="description" name="description" rows="3" placeholder="Tell us what you need removed — e.g., old couch and two mattresses from upstairs bedroom"></textarea></div>
         <input type="hidden" name="utm_source" value=""/>
@@ -567,6 +572,17 @@
         else{alert('Something went wrong. Please call (682) 337-2918 instead.');}
       })
       .catch(function(){alert('Something went wrong. Please call (682) 337-2918 instead.');});
+    });
+  });
+  </script>
+
+  <script>
+  document.querySelectorAll('input[name="phone"]').forEach(function(input){
+    input.addEventListener('input',function(e){
+      var x=e.target.value.replace(/\D/g,'').substring(0,10);
+      if(x.length>6)e.target.value='('+x.substring(0,3)+') '+x.substring(3,6)+'-'+x.substring(6);
+      else if(x.length>3)e.target.value='('+x.substring(0,3)+') '+x.substring(3);
+      else if(x.length>0)e.target.value='('+x;
     });
   });
   </script>

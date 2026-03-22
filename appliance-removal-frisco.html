@@ -87,6 +87,8 @@
     .fi{border-bottom:1px solid rgba(232,237,244,.06)}.fq{width:100%;background:none;border:none;padding:26px 0;font-family:'Outfit',sans-serif;font-size:1.02rem;font-weight:600;color:var(--cr);text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;transition:color .3s}.fq:hover{color:var(--or)}.far{font-size:1.2rem;color:var(--or);transition:transform .3s;flex-shrink:0}
     .fa{max-height:0;overflow:hidden;transition:max-height .4s ease}.fai{padding-bottom:24px;font-size:.9rem;color:var(--mu);line-height:1.8}
     .fi.ac .far{transform:rotate(45deg)}.fi.ac .fa{max-height:500px!important}
+  
+    .fbtn{width:100%;padding:18px;background:linear-gradient(135deg,var(--or) 0%,var(--or-d) 50%,var(--or) 100%);background-size:200% 100%;color:#fff;border:none;border-radius:12px;font-family:'Outfit',sans-serif;font-size:1.05rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .4s cubic-bezier(.22,1,.36,1);margin-top:12px;box-shadow:0 8px 32px rgba(242,101,34,.35),0 0 0 1px rgba(242,101,34,.15);position:relative;overflow:hidden;animation:btnShimmer 3s ease-in-out infinite}.fbtn::before{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.15),transparent);transition:left .6s}.fbtn:hover{transform:translateY(-3px);box-shadow:0 16px 56px rgba(242,101,34,.5),0 0 0 1px rgba(242,101,34,.3);background-position:100% center}.fbtn:hover::before{left:120%}.fbtn:active{transform:translateY(0)}@keyframes btnShimmer{0%,100%{background-position:0% center}50%{background-position:100% center}}
   </style>
 
   <!-- Google Analytics — replace G-0W6LEKTQR7 with your real Measurement ID -->
@@ -221,8 +223,14 @@
           <p style="text-align:center;">Fill out the form below or call <a href="tel:+16823372918" style="color:var(--or);font-weight:700;">(682) 337-2918</a> for an immediate estimate.</p>
           <form id="form-appl" action="https://formspree.io/f/mdawwrrd" method="POST"  style="max-width:540px;margin:24px auto 0;">
                         <div class="fg"><label for="q-name-appl">Your Name *</label><input type="text" id="q-name-appl" name="name" placeholder="John Smith" required/></div>
-            <div class="fg"><label for="q-phone-appl">Phone Number *</label><input type="tel" id="q-phone-appl" name="phone" placeholder="(682) 337-2918" required/></div>
-            <div class="fg"><label for="q-address-appl">Pickup Address</label><input type="text" id="q-address-appl" name="address" placeholder="Your Frisco area address"/></div>
+            <div class="fg"><label for="q-phone-appl">Phone Number *</label><input type="tel" id="q-phone-appl" name="phone" placeholder="(214) 555-1234" required/></div>
+            <div class="fg"><label for="q-address-appl">Street Address</label><input type="text" id="q-address-appl" name="address" placeholder="1234 Main Street" required/></div>
+            <div class="fg"><label for="q-apt-appl">Apt / Suite / Unit <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--mu2);">(optional)</span></label><input type="text" id="q-apt-appl" name="apt" placeholder="Apt 204"/></div>
+            <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;">
+              <div class="fg"><label for="q-city-appl">City</label><input type="text" id="q-city-appl" name="city" placeholder="Frisco"/></div>
+              <div class="fg"><label for="q-state-appl">State</label><input type="text" id="q-state-appl" name="state" placeholder="TX"/></div>
+              <div class="fg"><label for="q-zip-appl">Zip Code</label><input type="text" id="q-zip-appl" name="zip" placeholder="75034"/></div>
+            </div>
             <div class="fg"><label for="q-details-appl">Describe What You Need Removed</label><textarea id="q-details-appl" name="details" rows="3" placeholder="E.g., Old refrigerator from garage, washer/dryer set" style="width:100%;padding:13px 16px;border:1px solid rgba(232,237,244,.08);border-radius:10px;background:rgba(232,237,244,.04);color:var(--cr);font-family:'Outfit',sans-serif;font-size:.95rem;resize:vertical;"></textarea></div>
             <div class="fg"><label for="description">Description (Optional)</label><textarea id="description" name="description" rows="3" placeholder="Tell us what you need removed — e.g., old couch and two mattresses from upstairs bedroom"></textarea></div><input type="hidden" name="utm_source" value=""/>
             <input type="hidden" name="utm_medium" value=""/>
@@ -231,7 +239,7 @@
             <input type="hidden" name="fbclid" value=""/>
             <input type="hidden" name="landing_page" value=""/>
             
-            <button type="submit" class="fbtn" style="width:100%;padding:16px;background:linear-gradient(135deg,var(--or),var(--or-d));color:#fff;border:none;border-radius:10px;font-family:'Outfit',sans-serif;font-size:1rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;margin-top:8px;box-shadow:0 8px 32px rgba(242,101,34,.3);">🚛 Get My Free Appliance Removal Quote</button>
+            <button type="submit" class="fbtn" class="fbtn">🚛 Get My Free Appliance Removal Quote</button>
             <p class="fn" style="text-align:center;font-size:.72rem;color:var(--mu2);margin-top:14px;">By submitting, you agree to be connected with a local junk removal provider. Your information is never sold to unrelated third parties.</p>
           </form>
         </div>
@@ -275,6 +283,8 @@
   
     .sh2 em{font-style:italic;position:relative;display:inline-block;padding-right:0.15em;padding-left:0.02em;overflow:visible;background:linear-gradient(90deg,var(--or) 0%,var(--or) 35%,var(--or-l) 48%,#fff 50%,var(--or-l) 52%,var(--or) 65%,var(--or) 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:emShim 8s ease-in-out 2s infinite}
     @keyframes emShim{0%,100%{background-position:100% center}25%{background-position:-50% center}100%{background-position:-50% center}}
+  
+    .fbtn{width:100%;padding:18px;background:linear-gradient(135deg,var(--or) 0%,var(--or-d) 50%,var(--or) 100%);background-size:200% 100%;color:#fff;border:none;border-radius:12px;font-family:'Outfit',sans-serif;font-size:1.05rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .4s cubic-bezier(.22,1,.36,1);margin-top:12px;box-shadow:0 8px 32px rgba(242,101,34,.35),0 0 0 1px rgba(242,101,34,.15);position:relative;overflow:hidden;animation:btnShimmer 3s ease-in-out infinite}.fbtn::before{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.15),transparent);transition:left .6s}.fbtn:hover{transform:translateY(-3px);box-shadow:0 16px 56px rgba(242,101,34,.5),0 0 0 1px rgba(242,101,34,.3);background-position:100% center}.fbtn:hover::before{left:120%}.fbtn:active{transform:translateY(0)}@keyframes btnShimmer{0%,100%{background-position:0% center}50%{background-position:100% center}}
   </style></noscript>
   <script>
     document.getElementById('yr').textContent=new Date().getFullYear();
@@ -296,6 +306,17 @@
         else{alert('Something went wrong. Please call (682) 337-2918 instead.');}
       })
       .catch(function(){alert('Something went wrong. Please call (682) 337-2918 instead.');});
+    });
+  });
+  </script>
+
+  <script>
+  document.querySelectorAll('input[name="phone"]').forEach(function(input){
+    input.addEventListener('input',function(e){
+      var x=e.target.value.replace(/\D/g,'').substring(0,10);
+      if(x.length>6)e.target.value='('+x.substring(0,3)+') '+x.substring(3,6)+'-'+x.substring(6);
+      else if(x.length>3)e.target.value='('+x.substring(0,3)+') '+x.substring(3);
+      else if(x.length>0)e.target.value='('+x;
     });
   });
   </script>
