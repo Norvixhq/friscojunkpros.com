@@ -298,8 +298,7 @@
         </div>
       </div>
       <form class="hf" id="quote" action="https://formspree.io/f/mdawwrrd" method="POST">
-        <input type="hidden" name="_next" value="https://www.friscojunkpros.com/thank-you.html"/>
-        <h3 class="ft">Get Your Free Quote</h3>
+                <h3 class="ft">Get Your Free Quote</h3>
         <p class="fs">Fast response — most quotes within 15 minutes</p>
         <div class="fg"><label for="name">Your Name *</label><input type="text" id="name" name="name" placeholder="John Smith" required/></div>
         <div class="fg"><label for="phone">Phone Number *</label><input type="tel" id="phone" name="phone" placeholder="(682) 337-2918" required/></div>
@@ -556,5 +555,20 @@
   </script>
   <script src="script.js" defer></script>
 
+
+  <script>
+  document.querySelectorAll('form[action*="formspree"]').forEach(function(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var data=new FormData(form);
+      fetch(form.action,{method:'POST',body:data,headers:{'Accept':'application/json'}})
+      .then(function(r){
+        if(r.ok){window.location.href='https://www.friscojunkpros.com/thank-you.html';}
+        else{alert('Something went wrong. Please call (682) 337-2918 instead.');}
+      })
+      .catch(function(){alert('Something went wrong. Please call (682) 337-2918 instead.');});
+    });
+  });
+  </script>
 </body>
 </html>
