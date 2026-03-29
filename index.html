@@ -260,6 +260,10 @@
     fbq('track','PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=27044194588516445&ev=PageView&noscript=1"/></noscript>
+  <script>
+  function smoothNav(id,delay){setTimeout(function(){requestAnimationFrame(function(){var el=document.getElementById(id);if(!el)return;var rect=el.getBoundingClientRect();var scrollTop=window.pageYOffset||document.documentElement.scrollTop;var target=rect.top+scrollTop-145;window.scrollTo({top:target,behavior:'smooth'})})},delay||10)}
+  function mobileNav(e,id){if(e&&e.preventDefault)e.preventDefault();if(typeof closeMobile==='function')closeMobile();smoothNav(id,400)}
+  </script>
 </head>
 <body>
   <a href="#main-content" class="skip">Skip to main content</a>
@@ -271,14 +275,14 @@
   <nav class="nv" id="nav" aria-label="Main navigation">
     <div class="nv-i">
       <a href="index.html" class="nv-b" aria-label="Frisco Junk Pros home"><img src="logo.png" alt="Frisco Junk Pros" width="420" height="120"/></a>
-      <div class="nv-l"><a href="#services" data-glow>Services</a><a href="#how-it-works">How It Works</a><a href="#reviews">Reviews</a><a href="#areas" data-glow>Areas</a><a href="#rules" data-glow-blue>Pickup Rules</a><a href="#faq">FAQ</a></div>
+      <div class="nv-l"><a href="javascript:void(0)" onclick="smoothNav('services',50)" data-glow>Services</a><a href="javascript:void(0)" onclick="smoothNav('how-it-works',50)">How It Works</a><a href="javascript:void(0)" onclick="smoothNav('reviews',50)">Reviews</a><a href="javascript:void(0)" onclick="smoothNav('areas',50)" data-glow>Areas</a><a href="javascript:void(0)" onclick="smoothNav('rules',50)" data-glow-blue>Pickup Rules</a><a href="javascript:void(0)" onclick="smoothNav('faq',50)">FAQ</a></div>
       <div class="nv-c"><a href="tel:+16823372918" class="btn btn-or" style="padding:10px 22px;font-size:.8rem;">📞 (682) 337-2918</a></div>
       <button class="nv-t" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
     </div>
   </nav>
 
   <div class="mm" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile navigation menu">
-    <a href="#services" onclick="mobileNav(event,'services')" style="color:var(--or);">Services</a><a href="#how-it-works" onclick="mobileNav(event,'how-it-works')">How It Works</a><a href="#reviews" onclick="mobileNav(event,'reviews')">Reviews</a><a href="#areas" onclick="mobileNav(event,'areas')" style="color:var(--or);">Service Areas</a><a href="#rules" onclick="mobileNav(event,'rules')" style="color:var(--blue-b);">Pickup Rules</a><a href="#faq" onclick="mobileNav(event,'faq')">FAQ</a>
+    <a href="javascript:void(0)" onclick="mobileNav(event,'services')" style="color:var(--or);">Services</a><a href="javascript:void(0)" onclick="mobileNav(event,'how-it-works')">How It Works</a><a href="javascript:void(0)" onclick="mobileNav(event,'reviews')">Reviews</a><a href="javascript:void(0)" onclick="mobileNav(event,'areas')" style="color:var(--or);">Service Areas</a><a href="javascript:void(0)" onclick="mobileNav(event,'rules')" style="color:var(--blue-b);">Pickup Rules</a><a href="javascript:void(0)" onclick="mobileNav(event,'faq')">FAQ</a>
     <a href="tel:+16823372918" class="btn btn-or" style="margin-top:16px;" onclick="closeMobile()">📞 (682) 337-2918</a>
   </div>
 
@@ -626,9 +630,6 @@
     var nt=document.getElementById('navToggle'),mm=document.getElementById('mobileMenu');
     nt.addEventListener('click',function(){nt.classList.toggle('op');mm.classList.toggle('op');var o=mm.classList.contains('op');document.body.style.overflow=o?'hidden':'';nt.setAttribute('aria-expanded',o?'true':'false');nt.setAttribute('aria-label',o?'Close menu':'Open menu')});
     function closeMobile(){nt.classList.remove('op');mm.classList.remove('op');document.body.style.overflow='';nt.setAttribute('aria-expanded','false');nt.setAttribute('aria-label','Open menu')}
-    function smoothNav(id,delay){setTimeout(function(){requestAnimationFrame(function(){var el=document.getElementById(id);if(!el)return;var rect=el.getBoundingClientRect();var scrollTop=window.pageYOffset||document.documentElement.scrollTop;var target=rect.top+scrollTop-145;window.scrollTo({top:target,behavior:'smooth'})})},delay||10)}
-    document.querySelectorAll('.nv-l a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();var id=this.getAttribute('href').substring(1);smoothNav(id,50)})});
-    function mobileNav(e,id){e.preventDefault();closeMobile();smoothNav(id,400)}
     var ro=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting)en.target.classList.add('vis')})},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
     document.querySelectorAll('.rv').forEach(function(el){ro.observe(el)});
     window.addEventListener('load',function(){setTimeout(function(){document.querySelectorAll('.svc').forEach(function(c){c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect();var x=((e.clientX-r.left)/r.width)*100;var y=((e.clientY-r.top)/r.height)*100;c.style.background='radial-gradient(circle at '+x+'% '+y+'%, rgba(242,101,34,0.06), rgba(232,237,244,0.01))'});c.addEventListener('mouseleave',function(){c.style.background=''})})},200)});
